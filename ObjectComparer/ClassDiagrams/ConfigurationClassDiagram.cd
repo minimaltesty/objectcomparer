@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Context">
+    <Position X="0.5" Y="0.5" Height="0.291" Width="14.5" />
+  </Comment>
+  <Comment CommentText="Configuration">
+    <Position X="0.5" Y="4.635" Height="0.291" Width="14.5" />
+  </Comment>
+  <Comment CommentText="MetadataReader">
+    <Position X="0.5" Y="11.792" Height="0.291" Width="14.5" />
+  </Comment>
+  <Comment CommentText="Item descriptors">
+    <Position X="0.5" Y="17.719" Height="0.291" Width="14.5" />
+  </Comment>
+  <Comment CommentText="Cache">
+    <Position X="0.5" Y="24.667" Height="0.291" Width="14.5" />
+  </Comment>
+  <Class Name="SIT.Components.ObjectComparer.Context">
+    <Position X="3.5" Y="1.25" Width="2.75" />
+    <Members>
+      <Field Name="_cache" Hidden="true" />
+      <Field Name="_configuration" Hidden="true" />
+      <Field Name="_default" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_metadataReader" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABACEAAgAIAAAAAAAABAIAAAAAAAAAAAgAEAAAAAMAA=</HashCode>
+      <FileName>Source\Configuration\Context.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.Configuration" BaseTypeListCollapsed="true">
+    <Position X="6" Y="5.25" Width="3.75" />
+    <Members>
+      <Field Name="_checkIgnoreProperty" Hidden="true" />
+      <Field Name="_checkStopRecursion" Hidden="true" />
+      <Field Name="_classDescriptions" Hidden="true" />
+      <Field Name="_default" Hidden="true" />
+      <Field Name="_getPropertiesBindingFlags" Hidden="true" />
+      <Field Name="_metadataRetrievalOptions" Hidden="true" />
+      <Field Name="_propertyNamesToIgnore" Hidden="true" />
+      <Field Name="_traceHelper" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ARAACIIABAAAEEAACADAICgAAIAIAAAEACIAABAAAAI=</HashCode>
+      <FileName>Source\Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.MetadataReader">
+    <Position X="4" Y="13" Width="3.25" />
+    <Members>
+      <Field Name="_context" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgkBBAAAIAAAAAAQAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\MetadataReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.MetadataReaderReflectComapreAttributes">
+    <Position X="9.75" Y="12.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkAAAAAIAAAAAAQAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\MetadataReaderReflectComapreAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.MetadataReaderReflectDescriptions">
+    <Position X="9.75" Y="14.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkAAAAAIAAAAAAQAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\MetadataReaderReflectDescriptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.ItemDescription">
+    <Position X="3.25" Y="22.25" Width="1.75" />
+    <Members>
+      <Field Name="_displayName" Hidden="true" />
+      <Field Name="_fullName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAIAAAAAAAAYAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\ItemDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.MemberDescription">
+    <Position X="4.75" Y="18.5" Width="3.25" />
+    <Members>
+      <Field Name="_declaringClassDescription" Hidden="true" />
+      <Field Name="_hasIndexParameters" Hidden="true" />
+      <Field Name="_memberInfo" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_typeIsEnumerable" Hidden="true" />
+      <Field Name="_typeIsString" Hidden="true" />
+      <Field Name="_typeName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAKABAAAAAAAAFAAAEMAQAAACAABAAAAAAAAIBQCA=</HashCode>
+      <FileName>Source\Configuration\MemberDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.ClassDescription">
+    <Position X="0.5" Y="18.5" Width="2.75" />
+    <Members>
+      <Field Name="_idPropertyName" Hidden="true" />
+      <Field Name="_members" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAQAAQAAQAAAABEAAAAAAACAABAAAAAAAAAgAACAAA=</HashCode>
+      <FileName>Source\Configuration\ClassDescription.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.Cache">
+    <Position X="4.5" Y="25.5" Width="3.25" />
+    <Members>
+      <Field Name="_classDescriptions" Hidden="true" />
+      <Field Name="_default" Hidden="true" />
+      <Field Name="_objects" Hidden="true" />
+      <Field Name="_propertyDescriptions" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABIACIBAAQgAAAAAIAgAIAAQhAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\Cache.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SIT.Components.ObjectComparer.IContext">
+    <Position X="0.5" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAIAA=</HashCode>
+      <FileName>Source\Configuration\Context.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SIT.Components.ObjectComparer.IConfiguration">
+    <Position X="0.5" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAAAEAAAAABAAAAAAAAAAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>Source\Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SIT.Components.ObjectComparer.IMetadataReader">
+    <Position X="0.5" Y="13.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkBAAAAIAAAAAAQAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\MetadataReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SIT.Components.ObjectComparer.ICache">
+    <Position X="0.5" Y="25.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIBAAAgAAAAAIAAAAAAQBAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\Cache.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SIT.Components.ObjectComparer.MetadataRetrievalOptions">
+    <Position X="0.5" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="SIT.Components.ObjectComparer.CheckStopRecursionDelegate">
+    <Position X="0.5" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAABIAAAAAAAAAACAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Source\Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SIT.Components.ObjectComparer.CheckIgnoreMemberDelegate">
+    <Position X="3" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

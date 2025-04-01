@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SIT.Components.ObjectComparer.SnapshotSerializableData">
+    <Position X="1" Y="5.5" Width="2.75" />
+    <Members>
+      <Field Name="_idPropertyName" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_typeName" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAAAAAAAFAAAAAAQAAAAAABAEACAAAAAAAAA=</HashCode>
+      <FileName>Source\Snapshot\SnapshotSerializableData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.SnapshotData">
+    <Position X="1.5" Y="3.75" Width="1.75" />
+    <Members>
+      <Field Name="_value" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Source\Snapshot\SnapshotData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.Snapshot">
+    <Position X="4.25" Y="3.75" Width="3" />
+    <Members>
+      <Field Name="_context" Hidden="true" />
+      <Field Name="_idPropertyValue" Hidden="true" />
+      <Field Name="_parent" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAABgAAAAAAQAAQAAAAAsAAAAIAAACAAAA=</HashCode>
+      <FileName>Source\Snapshot\Snapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.ObjectSnapshot">
+    <Position X="4.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_properties" Hidden="true" />
+      <Field Name="_trace" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAAAAAAAAAAAAAFAAAAAAAAACIAA=</HashCode>
+      <FileName>Source\Snapshot\ObjectSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SIT.Components.ObjectComparer.EnumerableSnapshot">
+    <Position X="8.25" Y="0.5" Width="3" />
+    <Members>
+      <Field Name="_childs" Hidden="true" />
+      <Field Name="_trace" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAJAAAAAAAAAAAAAAAFAEAAAAAABAIAA=</HashCode>
+      <FileName>Source\Snapshot\EnumerableSnapshot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

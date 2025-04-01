@@ -1,0 +1,167 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectComparer", "ObjectComparer\ObjectComparer.csproj", "{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{0F3F04FE-FE1D-42DA-B9A0-D4C31BC65CEA}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\HowTo_UsingAttributes.aml = Documentation\HowTo_UsingAttributes.aml
+		Documentation\SDK.shfbproj = Documentation\SDK.shfbproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{8575D4AC-D335-44D1-917F-9F14A4FDD736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_IdPropertyName", "Documentation\Examples\Example_IdPropertyName\Example_IdPropertyName.csproj", "{1D856259-14D2-4839-ADD8-A157D3C48CEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{24FD8947-287F-41B9-84D0-A7FC32B0243F}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Screenshots\DiffForm.png = Documentation\Screenshots\DiffForm.png
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectComparer.Tests", "ObjectComparer.Tests\ObjectComparer.Tests.csproj", "{99007E36-FAFF-47F6-A2D9-1E7D802785E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E511C07A-8B47-4DFE-A5EF-3B4DBD3F68F3}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		ObjectComparer.vsmdi = ObjectComparer.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectComparer.UI.WinForms", "ObjectComparer.UI.WinForms\ObjectComparer.UI.WinForms.csproj", "{187242D9-C592-41B8-BEF5-64C4AC68D12B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildScripts", "BuildScripts", "{2CD38697-249A-4615-BD82-2916DAC5AB5B}"
+	ProjectSection(SolutionItems) = preProject
+		BuildScripts\Build.msbuild = BuildScripts\Build.msbuild
+		BuildScripts\Build_Package.msbuild = BuildScripts\Build_Package.msbuild
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{C196F50B-0469-4E21-BBE3-3B4D3C96E7E0}"
+	ProjectSection(SolutionItems) = preProject
+		Configuration\Project.configuration = Configuration\Project.configuration
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_Configuration", "Documentation\Examples\Example_Configuration\Example_Configuration.csproj", "{7D830178-D99C-45E5-856A-04F20DF67ED6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs34
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ObjectComparer\\ObjectComparer.csproj
+		SccProjectName1 = ObjectComparer
+		SccLocalPath1 = ObjectComparer
+		SccProjectUniqueName2 = SampleApp\\SampleApp.csproj
+		SccProjectName2 = SampleApp
+		SccLocalPath2 = SampleApp
+		SccProjectUniqueName3 = Documentation\\Examples\\Example_IdPropertyName\\Example_IdPropertyName.csproj
+		SccProjectTopLevelParentUniqueName3 = ObjectComparer.sln
+		SccProjectName3 = Documentation/Examples/Example_IdPropertyName
+		SccLocalPath3 = Documentation\\Examples\\Example_IdPropertyName
+		SccProjectUniqueName4 = ObjectComparer.Tests\\ObjectComparer.Tests.csproj
+		SccProjectName4 = ObjectComparer.Tests
+		SccLocalPath4 = ObjectComparer.Tests
+		SccProjectUniqueName5 = ObjectComparer.UI.WinForms\\ObjectComparer.UI.WinForms.csproj
+		SccProjectName5 = ObjectComparer.UI.WinForms
+		SccLocalPath5 = ObjectComparer.UI.WinForms
+		SccProjectUniqueName6 = Documentation\\Examples\\Example_Configuration\\Example_Configuration.csproj
+		SccProjectTopLevelParentUniqueName6 = ObjectComparer.sln
+		SccProjectName6 = Documentation/Examples/Example_Configuration
+		SccLocalPath6 = Documentation\\Examples\\Example_Configuration
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ObjectComparer.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|x64.ActiveCfg = Debug|x64
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|x64.Build.0 = Debug|x64
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|x86.ActiveCfg = Debug|x86
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Debug|x86.Build.0 = Debug|x86
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|x64.ActiveCfg = Release|x64
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|x64.Build.0 = Release|x64
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|x86.ActiveCfg = Release|x86
+		{7272A03D-E7FB-4BD6-BB0D-BAC52FC1E43D}.Release|x86.Build.0 = Release|x86
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|x64.ActiveCfg = Debug|x64
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|x64.Build.0 = Debug|x64
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|x86.ActiveCfg = Debug|x86
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Debug|x86.Build.0 = Debug|x86
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|x64.ActiveCfg = Release|x64
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|x64.Build.0 = Release|x64
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|x86.ActiveCfg = Release|x86
+		{D8B1B7B9-A10F-416D-8107-63B3FFCC5083}.Release|x86.Build.0 = Release|x86
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|x64.ActiveCfg = Debug|x64
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|x64.Build.0 = Debug|x64
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|x86.ActiveCfg = Debug|x86
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Debug|x86.Build.0 = Debug|x86
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|x64.ActiveCfg = Release|x64
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|x64.Build.0 = Release|x64
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|x86.ActiveCfg = Release|x86
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB}.Release|x86.Build.0 = Release|x86
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|x64.ActiveCfg = Debug|x64
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|x64.Build.0 = Debug|x64
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|x86.ActiveCfg = Debug|x86
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Debug|x86.Build.0 = Debug|x86
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|x64.ActiveCfg = Release|x64
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|x64.Build.0 = Release|x64
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|x86.ActiveCfg = Release|x86
+		{99007E36-FAFF-47F6-A2D9-1E7D802785E7}.Release|x86.Build.0 = Release|x86
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|x64.ActiveCfg = Debug|x64
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|x64.Build.0 = Debug|x64
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|x86.ActiveCfg = Debug|x86
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Debug|x86.Build.0 = Debug|x86
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|x64.ActiveCfg = Release|x64
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|x64.Build.0 = Release|x64
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|x86.ActiveCfg = Release|x86
+		{187242D9-C592-41B8-BEF5-64C4AC68D12B}.Release|x86.Build.0 = Release|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Debug|x64.ActiveCfg = Debug|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Debug|x86.ActiveCfg = Debug|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Debug|x86.Build.0 = Debug|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Release|Any CPU.ActiveCfg = Release|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Release|x64.ActiveCfg = Release|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Release|x86.ActiveCfg = Release|x86
+		{7D830178-D99C-45E5-856A-04F20DF67ED6}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8575D4AC-D335-44D1-917F-9F14A4FDD736} = {0F3F04FE-FE1D-42DA-B9A0-D4C31BC65CEA}
+		{24FD8947-287F-41B9-84D0-A7FC32B0243F} = {0F3F04FE-FE1D-42DA-B9A0-D4C31BC65CEA}
+		{1D856259-14D2-4839-ADD8-A157D3C48CEB} = {8575D4AC-D335-44D1-917F-9F14A4FDD736}
+		{7D830178-D99C-45E5-856A-04F20DF67ED6} = {8575D4AC-D335-44D1-917F-9F14A4FDD736}
+	EndGlobalSection
+	GlobalSection(SpecExplorer.ActivityCompletionStatus) = preSolution
+		SpecExplorer.ActivityCompletionStatus = TestExisting: ;ModelFromScratch: 
+	EndGlobalSection
+EndGlobal

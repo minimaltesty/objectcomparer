@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>SIT.ObjectComparer</id>
+    <version>1.3.4</version>
+    <title>ObjectComparer</title>
+    <authors>testy</authors>
+    <owners>testy</owners>
+    <projectUrl>http://objectcomparer.codeplex.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Create snapshots of any .Net object, compare them and create a structured diff</description>
+    <summary>Compare .Net objects</summary>
+    <releaseNotes>Solved issues with external configuration</releaseNotes>
+    <tags>compare objectcomparer audit adittrail c# snapshot change changeset diff structured</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="content\SIT.Components.ObjectComparer.XML" target="content" />
+    <file src="net20\SIT.Components.ObjectComparer.dll" target="lib\net20" />
+    <file src="net20\SIT.Components.ObjectComparer.pdb" target="lib\net20" />
+    <file src="net40\SIT.Components.ObjectComparer.dll" target="lib\net40" />
+    <file src="net40\SIT.Components.ObjectComparer.pdb" target="lib\net40" />
+
+  </files>
+</package>

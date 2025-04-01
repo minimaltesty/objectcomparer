@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+    <Platform>AnyCPU</Platform>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PackageDir>..\_ReleasePackage\</PackageDir>
+    <PackageBinDir>$(PackageDir)\Bin\$(Configuration)\$(Platform)</PackageBinDir>
+    <PackageNugetDir>$(PackageDir)\Nuget</PackageNugetDir>
+  </PropertyGroup>
+  
+  <Target Name="Build">
+    <MSBuild
+      Projects="Build.msbuild"
+      Properties="
+        TargetFrameworkVersion=$(TargetFrameworkVersion);
+        Configuration=$(Configuration);
+        Platform=$(Platform);
+        PackageDir=$(PackageDir);
+        PackageBinDir=$(PackageBinDir);
+        PackageNugetDir=$(PackageNugetDir);
+        "
+      />
+
+    <ItemGroup>
+      <OuputFiles Include="$(PackageBinDir)\*.dll;$(PackageBinDir)\*.pdb"/>
+    </ItemGroup>
+    <Message Text="Copy files from $(PackageBinDir)\*.* to $(PackageNugetDir)\net20"/>
+    <Copy SourceFiles="@(OuputFiles)" DestinationFolder="$(PackageNugetDir)\net20"/>
+
+    <PropertyGroup>
+      <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
+      <Platform Condition="'$(Platform)'==''">AnyCPU</Platform>
+      <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+      <PackageBinDir>$(PackageDir)\Bin\$(Configuration)\$(Platform)</PackageBinDir>
+    </PropertyGroup>
+
+    <MSBuild
+      Projects="Build.msbuild"
+      Properties="TargetFrameworkVersion=v4.0;Configuration=Release;Platform=AnyCPU"
+      />
+
+    <ItemGroup>
+      <OuputFiles Remove="$(PackageBinDir)\*.*"/>
+      <OuputFiles Include="$(PackageBinDir)\*.dll;$(PackageBinDir)\*.pdb"/>
+    </ItemGroup>
+    <Message Text="Copy files from $(PackageBinDir)\*.* to $(PackageNugetDir)\net40"/>
+    <Copy SourceFiles="@(OuputFiles)" DestinationFolder="$(PackageNugetDir)\net40"/>
+
+    <ItemGroup>
+      <OuputFiles Remove="$(PackageBinDir)\*.*"/>
+      <OuputFiles Include="$(PackageBinDir)\*.xml"/>
+    </ItemGroup>
+    <Message Text="Copy files from $(PackageBinDir)\*.* to $(PackageNugetDir)\content"/>
+    <Copy SourceFiles="@(OuputFiles)" DestinationFolder="$(PackageNugetDir)\content"/>
+
+
+    <!-- Create nuget package -->
+    <Message Text="Creating nuget package"/>
+    <Exec Command="nuget.exe pack ..\ObjectComparer\SIT.ObjectComparer.nuspec -BasePath $(PackageNugetDir) -OutputDirectory $(PackageNugetDir)"></Exec>
+
+
+  </Target>
+</Project>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath Condition="'$(OutputPath)'==''">bin\$(Configuration)\$(Platform)</OutputPath>
+    
+    <HelpBuildFile>..\Documentation\SDK.shfbproj</HelpBuildFile>
+    
+    <PackageDir Condition="'$(PackageDir)'==''">..\_ReleasePackage\</PackageDir>
+    <PackageBinDir Condition="'$(PackageBinDir)'==''">$(PackageDir)\Bin\$(Configuration)\$(Platform)</PackageBinDir>
+    <PackageNugetDir Condition="'$(PackageNugetDir)'==''">$(PackageDir)\Nuget</PackageNugetDir>
+    <PackageDocDir>$(PackageDir)\Documentation</PackageDocDir>
+    <PackageHelpDir>$(PackageDocDir)</PackageHelpDir>
+    <PackageSourceDir>$(PackageDir)\Source\</PackageSourceDir>
+    
+
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectFilesToBuild
+      Include="..\ObjectComparer\ObjectComparer.csproj;"
+      Exclude="" 
+      />
+  </ItemGroup>
+
+  <UsingTask TaskName="DownloadFile" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+    <ParameterGroup>
+      <Address ParameterType="System.String" Required="true"/>
+      <FileName ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Reference Include="System" />
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+            new System.Net.WebClient().DownloadFile(Address, FileName);
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+
+
+  <Target Name="Build">
+    <Message Importance="high" Text="HOOOOOOOOOOOOOOO:$(TargetFrameworkIdentifier)"/>
+    <MakeDir Directories="
+             $(PackageDir);
+             $(PackageBinDir);
+             $(PackageNugetDir);
+             $(PackageDocDir);
+             $(PackageHelpDir);
+             $(PackageSourceDir);
+             "/>
+    
+    <!-- Build projects -->
+    <Message Text="Buiding projects"/>
+    <MSBuild
+      ContinueOnError="true"
+      Projects="@(ProjectFilesToBuild)"
+      BuildInParallel="false"
+      Properties="
+        OutputPath=$(OutputPath);
+        Configuration=$(Configuration);
+        Platform=$(Platform);
+        CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=true;
+        CreateHardLinksForCopyAdditionalFilesIfPossible=true;
+        CreateHardLinksForCopyLocalIfPossible=true;
+        CreateHardLinksForPublishFilesIfPossible=true
+        "
+      Targets="
+        Clean;
+        Build
+        "
+      />
+    <ConvertToAbsolutePath Paths="..\ObjectComparer\$(OutputPath)">
+      <Output TaskParameter="AbsolutePaths" PropertyName="OutputPathAbsolute"/>
+    </ConvertToAbsolutePath>
+
+    <ItemGroup>
+      <OuputFiles Include="$(OutputPathAbsolute)\*.*"/>
+    </ItemGroup>
+    <Message Text="Copy files from $(OutputPathAbsolute) to $(PackageBinDir)"/>
+    <Copy SourceFiles="@(OuputFiles)" DestinationFolder="$(PackageBinDir)"/>
+
+
+    <!-- Create nuget package -->
+    <Message Condition="'$(CreateNuget)'!=''" Text="Creating nuget package"/>
+    <Exec Condition="'$(CreateNuget)'!=''" Command="nuget.exe pack ..\ObjectComparer\SIT.ObjectComparer.nuspec -OutputDirectory $(PackageNugetDir)"></Exec>
+
+
+    <!-- Create chm help -->
+    <Message Condition="'$(Documentation)'!=''" Text="Building Help"/>
+    <ItemGroup Condition="'$(Documentation)'!=''">
+      <DocTarget Include="$(PackageBinDir)\SIT.*.xml" />
+      <DocTarget Include="$(PackageBinDir)\SIT.*.dll" />
+    </ItemGroup>
+    <CreateProperty Condition="'$(Documentation)'!=''" Value="@(DocTarget -> '&lt;DocumentationSource sourceFile=%27%(FullPath)%27 /&gt;', '')">
+      <Output TaskParameter="Value" PropertyName="DocumentationSources" />
+    </CreateProperty>
+    <Message Condition="'$(Documentation)'!=''" Text="AAAA:$(DocumentationSources)AAAA"/>
+    <MSBuild
+      Condition="'$(Documentation)'!=''"
+      ToolsVersion="4.0"
+      Projects="$(HelpBuildFile)"
+      BuildInParallel="true"
+      Properties="
+        Configuration=$(Configuration);
+        Platform=$(Platform);
+        OutputPath=$(PackageHelpDir);
+        DocumentationSources=$(DocumentationSources);
+        CreateHardLinksForCopyFilesToOutputDirectoryIfPossible=true;
+        CreateHardLinksForCopyAdditionalFilesIfPossible=true;
+        CreateHardLinksForCopyLocalIfPossible=true;
+        CreateHardLinksForPublishFilesIfPossible=true
+        "/>
+    
+    
+    <!-- Get source code -->
+    <!--<DownloadFile Address="http://somewebsite/remotefile" FileName="localfilepath" />-->
+    <!--Text - {"downloadUrl":"http://objectcomparer.codeplex.com/sourcecontrol/captureDownload","changesetId":"28672"}-->
+    
+    
+    <!-- Create ZIP file-->
+    
+    
+    <Message 
+      Condition="'$(Zip)'!=''"
+      Text="Zipping ..." Importance="high"
+      />
+    <CreateItem Condition="'$(Zip)'!=''" Include="$(PackageDir)\**\*">
+      <Output ItemName="FilesToZip" TaskParameter="Include"/>
+    </CreateItem>
+
+    <MSBuild.ExtensionPack.Compression.DNZip 
+      Condition="'$(Zip)'!=''"
+      TaskAction="Create" 
+      CompressionLevel="BestCompression" 
+      CompressFiles="@(FilesToZip)" 
+      ZipFileName="$(BaseOutputPath)\$(BuildDir).zip" 
+      RemoveRoot="$(BaseOutputPath)"
+      />
+
+
+  </Target>
+</Project>

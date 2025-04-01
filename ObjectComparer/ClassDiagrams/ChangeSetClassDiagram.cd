@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SIT.Components.ObjectComparer.ChangeSet">
+    <Position X="6.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_changeType" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_path" Hidden="true" />
+      <Field Name="_properties" Hidden="true" />
+      <Field Name="_valueA" Hidden="true" />
+      <Field Name="_valueB" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEgAIAAAAAACEAIEAAEAAAQAQAAAAEAEACAgCAACAAA=</HashCode>
+      <FileName>Source\ChangeSet\ChangeSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
