@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a0fc9911-ccf0-4abd-b8d0-8ed11dcda1ec}</ProjectGuid>
+    <SHFBSchemaVersion>1.9.9.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\_ReleasePackage\Bin\$(Configuration)\$(Platform)\SIT.Components.ObjectComparer.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\_ReleasePackage\Bin\$(Configuration)\$(Platform)\SIT.Components.ObjectComparer.xml" xmlns="" />
+    </DocumentationSources>
+    <SyntaxFilters>C#</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <PresentationStyle>OpenXML</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>Documentation for SIT.ObjectComparer</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ComponentConfigurations>
+      <ComponentConfig id="Comments Index Data (SQL Cache)" enabled="True">
+        <component id="Comments Index Data (SQL Cache)">
+  <index name="comments" value="/doc/members/member" key="@name" cache="30" localCacheSize="2500" cacheProject="false" connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;">
+	{@FrameworkCommentList}
+	{@CommentFileList}
+</index>
+  <copy name="comments" source="*" target="/document/comments" />
+</component>
+      </ComponentConfig>
+<ComponentConfig id="Reflection Index Data (SQL Cache)" enabled="True"><component id="Reflection Index Data (SQL Cache)">
+  <index name="reflection" value="/reflection/apis/api" key="@id" cache="15" localCacheSize="2500" cacheProject="false" connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;">
+    <data base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" duplicateWarning="false" groupId="ReflectionIndexCache">
+		{@ReferenceLinkNamespaceFiles}
+	</data>
+    <data files="reflection.xml" groupId="Project_Ref_{@UniqueID}" />
+  </index>
+  <copy name="reflection" source="*" target="/document/reference" />
+</component></ComponentConfig>
+<ComponentConfig id="Resolve Reference Links (SQL Cache)" enabled="True"><component id="Resolve Reference Links (SQL Cache)">
+  <locale value="{@Locale}" />
+  <linkTarget value="{@SdkLinkTarget}" />
+  <helpOutput format="HtmlHelp1">
+    <sqlCache connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;" msdnLocalCacheSize="2500" frameworkLocalCacheSize="2500" projectLocalCacheSize="2500" cacheProject="false" />
+    <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" />
+    <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@HtmlSdkLinkType}" groupId="FrameworkTargets">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+    <targets files="reflection.xml" type="Local" groupId="Project_{@UniqueID}" />
+  </helpOutput>
+  <helpOutput format="MSHelp2">
+    <sqlCache connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;" msdnLocalCacheSize="2500" frameworkLocalCacheSize="2500" projectLocalCacheSize="2500" cacheProject="false" />
+    <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" />
+    <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@MSHelp2SdkLinkType}" groupId="FrameworkTargets">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+    <targets files="reflection.xml" type="Index" groupId="Project_{@UniqueID}" />
+  </helpOutput>
+  <helpOutput format="MSHelpViewer">
+    <sqlCache connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;" msdnLocalCacheSize="2500" frameworkLocalCacheSize="2500" projectLocalCacheSize="2500" cacheProject="false" />
+    <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" />
+    <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@MSHelpViewerSdkLinkType}" groupId="FrameworkTargets">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+    <targets files="reflection.xml" type="Id" groupId="Project_{@UniqueID}" />
+  </helpOutput>
+  <helpOutput format="Website">
+    <sqlCache connectionString="Data Source=WSAPW8\SQL2012EXPRESS;Initial Catalog=Sandcastle;Integrated Security=True;Application Name=&quot;Sandcastle BuildAssembler&quot;" msdnLocalCacheSize="2500" frameworkLocalCacheSize="2500" projectLocalCacheSize="2500" cacheProject="false" />
+    <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" />
+    <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@WebsiteSdkLinkType}" groupId="FrameworkTargets">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+    <targets files="reflection.xml" type="Local" groupId="Project_{@UniqueID}" />
+  </helpOutput>
+</component></ComponentConfig></ComponentConfigurations>
+    <RootNamespaceTitle>Object comparer</RootNamespaceTitle>
+    <CopyrightHref>http://objectcomparer.codeplex.com/license</CopyrightHref>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>OpenXml</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <KeepLogFile>False</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <CleanIntermediates>True</CleanIntermediates>
+    <CatalogName>VisualStudio11</CatalogName>
+    <TocParentId>-1</TocParentId>
+    <TocParentVersion>100</TocParentVersion>
+    <TopicVersion>100</TopicVersion>
+    <TocOrder>-1</TocOrder>
+    <ProductTitle>SIT.ObjectComparer</ProductTitle>
+    <VendorName>SIT</VendorName>
+    <MSHelpViewerSdkLinkType>Msdn</MSHelpViewerSdkLinkType>
+    <CatalogVersion>100</CatalogVersion>
+    <CatalogProductId>VS</CatalogProductId>
+    <VisibleItems>InheritedMembers, Protected</VisibleItems>
+    <PlugInConfigurations>
+      <PlugInConfig id="Additional Content Only" enabled="True">
+        <configuration />
+      </PlugInConfig>
+    </PlugInConfigurations>
+    <MissingTags>None</MissingTags>
+    <MaximumGroupParts>3</MaximumGroupParts>
+    <NamespaceGrouping>False</NamespaceGrouping>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="Examples\Example_IdPropertyName\Example_IdPropertyName.csproj">
+      <Name>SIT.Components.ObjectComparer.Documentation.Examples.Example_IdPropertyName</Name>
+      <Project>{1D856259-14D2-4839-ADD8-A157D3C48CEB}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HowTo_ConfigureIDictionary.aml" />
+    <None Include="HowTo_UsingConfiguration.aml" />
+    <None Include="HowTo_UsingConfigurationFile.aml" />
+    <None Include="HowTo_UsingAttributes.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="Content Layout.content" />
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GetMemberBindingFlags>Instance Static Public NonPublic</GetMemberBindingFlags>
+  <MetadataRetrievalOptions>ReflectDescriptions</MetadataRetrievalOptions>
+  <ClassDescriptions>
+    <ClassDescription FullName="System.Collections.Generic.Dictionary`2[[System.Int32],[System.String]]">
+      <DisplayName>MyDictionary</DisplayName>
+      <IdPropertyName></IdPropertyName>
+      <Members>
+        <Member FullName="Count">
+          <DisplayName>NumberOfElements</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+    <ClassDescription FullName="System.Collections.Generic.KeyValuePair`2[[System.Int32],[System.String]]">
+      <DisplayName>MyDictEntry</DisplayName>
+      <IdPropertyName>Key</IdPropertyName>
+      <Members>
+        <Member FullName="Key">
+          <DisplayName>Identity</DisplayName>
+        </Member>
+        <Member FullName="Value">
+          <DisplayName>MyValue</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+  </ClassDescriptions>
+</Configuration>

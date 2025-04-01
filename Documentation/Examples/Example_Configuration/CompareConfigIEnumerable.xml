@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GetMemberBindingFlags>Instance Static Public NonPublic</GetMemberBindingFlags>
+  <MetadataRetrievalOptions>ReflectDescriptions</MetadataRetrievalOptions>
+  <AutoPopuplateDerived>1</AutoPopuplateDerived>
+  <ClassDescriptions>
+    <ClassDescription FullName="System.Collections.IEnumerable">
+      <DisplayName>MyDict</DisplayName>
+      <IdPropertyName></IdPropertyName>
+      <Members></Members>
+    </ClassDescription>
+    <ClassDescription FullName="YouNameSpace.Person2">
+      <DisplayName>Person</DisplayName>
+      <IdPropertyName>Id</IdPropertyName>
+      <Members>
+        <Member FullName="Id">
+          <DisplayName>ID</DisplayName>
+        </Member>
+        <Member FullName="Name">
+          <DisplayName>Name</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+  </ClassDescriptions>
+</Configuration>

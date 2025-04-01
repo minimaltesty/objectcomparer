@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GetMemberBindingFlags>Instance Static Public NonPublic</GetMemberBindingFlags>
+  <MetadataRetrievalOptions>ReflectDescriptions</MetadataRetrievalOptions>
+  <ClassDescriptions>
+    <ClassDescription FullName="SIT.Components.ObjectComparer.Documentation.Examples.Example_Configuration.Order">
+      <DisplayName>OrderDisp</DisplayName>
+      <IdPropertyName>Id</IdPropertyName>
+      <Members>
+        <Member FullName="Id">
+          <DisplayName>Identity</DisplayName>
+        </Member>
+        <Member FullName="Number">
+          <DisplayName>Number</DisplayName>
+        </Member>
+        <Member FullName="Customer">
+          <DisplayName>Customer</DisplayName>
+        </Member>
+        <Member FullName="Positions">
+          <DisplayName>Positions</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+    <ClassDescription FullName="SIT.Components.ObjectComparer.Documentation.Examples.Example_Configuration.OrderPosition">
+      <DisplayName>OrderPositionDisp</DisplayName>
+      <IdPropertyName>Id</IdPropertyName>
+      <Members>
+        <Member FullName="Id">
+          <DisplayName>Identity</DisplayName>
+        </Member>
+        <Member FullName="OrderId">
+          <DisplayName>OrderId</DisplayName>
+        </Member>
+        <Member FullName="Number">
+          <DisplayName>Number</DisplayName>
+        </Member>
+        <Member FullName="OrderIndex">
+          <DisplayName>OrderIndex</DisplayName>
+        </Member>
+        <Member FullName="Text">
+          <DisplayName>Text</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+    <ClassDescription FullName="SIT.Components.ObjectComparer.Documentation.Examples.Example_Configuration.Customer">
+      <DisplayName>Customer</DisplayName>
+      <IdPropertyName>Id</IdPropertyName>
+      <Members>
+        <Member FullName="Id">
+          <DisplayName>Id</DisplayName>
+        </Member>
+        <Member FullName="Displayname">
+          <DisplayName>Displayname</DisplayName>
+        </Member>
+        <Member FullName="Number">
+          <DisplayName>Number</DisplayName>
+        </Member>
+        <Member FullName="Firstname">
+          <DisplayName>Firstname</DisplayName>
+        </Member>
+        <Member FullName="Lastname">
+          <DisplayName>Lastname</DisplayName>
+        </Member>
+        <Member FullName="Address">
+          <DisplayName>Address</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+    <ClassDescription FullName="SIT.Components.ObjectComparer.Documentation.Examples.Example_Configuration.Address">
+      <DisplayName>Adress</DisplayName>
+      <IdPropertyName>Id</IdPropertyName>
+      <Members>
+        <Member FullName="Id">
+          <DisplayName>Id</DisplayName>
+        </Member>
+        <Member FullName="Street">
+          <DisplayName>Street</DisplayName>
+        </Member>
+        <Member FullName="Zip">
+          <DisplayName>Zip</DisplayName>
+        </Member>
+        <Member FullName="City">
+          <DisplayName>City</DisplayName>
+        </Member>
+      </Members>
+    </ClassDescription>
+  </ClassDescriptions>
+</Configuration>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="c15b3749-547a-4aeb-8a34-5272171c9f87" visible="True" noFile="true" isDefault="true" isExpanded="true" title="HowTo">
+    <Topic id="3fe0145c-b974-4394-8d30-0b97611e145a" visible="True" title="Compare using attributes" />
+    <Topic id="40851e48-8beb-420a-b164-c7b325846c8c" visible="True" title="Compare using an external configuration file" />
+    <Topic id="fd44d0d8-bad6-4466-8c13-003ce747a0b5" visible="True" isSelected="true" title="Compare using a configuration" />
+    <Topic id="5110d3f6-437e-4ef0-b059-5c4d084624e5" visible="True" title="Configure comparison of IDictionary" />
+  </Topic>
+</Topics>
